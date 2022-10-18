@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  redis:
+    container_name: redis
+    image: 'test/test:latest'
+    # image: 'dongsxyz/redis:latest'
+    volumes:
+      - type: bind
+        source: ./redis.tls.conf
+        target: /redis/conf/redis.tls.conf 
+      - type: bind
+        source: ./users.acl
+        target: /redis/conf/users.acl
+    ports:
+      - 6379:6379
+      - 16379:16379
