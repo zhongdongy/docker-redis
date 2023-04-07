@@ -3,8 +3,8 @@ version: '3.9'
 services:
   redis:
     container_name: redis
-    image: 'test/test:latest'
-    # image: 'dongsxyz/redis:latest'
+    image: 'dongsxyz/redis:latest'
+    restart: always
     volumes:
       - type: bind
         source: ./redis.tls.conf
