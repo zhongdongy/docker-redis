@@ -1,1 +1,1 @@
-user default +@all on >12345678
+user default +@all ~* &* on >12345678
